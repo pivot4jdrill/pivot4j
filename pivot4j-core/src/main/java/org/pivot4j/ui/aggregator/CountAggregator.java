@@ -97,10 +97,16 @@ public class CountAggregator extends AbstractAggregator {
      */
     @Override
     protected Double getValue(Position position) {
-        if (position.getMembers().isEmpty()) {
+
+        try {
+            if (position.getMembers().isEmpty()) {
+                return null;
+            }
+
+            return (double) getCount(position);
+        } catch (Exception e) {
             return null;
         }
 
-        return (double) getCount(position);
     }
 }

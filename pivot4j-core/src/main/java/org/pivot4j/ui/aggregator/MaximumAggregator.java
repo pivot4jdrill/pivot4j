@@ -48,14 +48,19 @@ public class MaximumAggregator extends AbstractAggregator {
     @Override
     protected Double calculate(Double value, Double aggregation,
             Position position, RenderContext context) {
-        if (value == null) {
-            return aggregation;
+        try {
+            if (value == null) {
+                return aggregation;
+            }
+
+            if (aggregation == null) {
+                return value;
+            }
+
+            return Math.max(value, aggregation);
+        } catch (Exception e) {
+            return 0d;
         }
 
-        if (aggregation == null) {
-            return value;
-        }
-
-        return Math.max(value, aggregation);
     }
 }

@@ -45,13 +45,19 @@ public class AverageAggregator extends TotalAggregator {
      */
     @Override
     protected Double getValue(Position position) {
-        int count = getCount(position);
-        Double value = super.getValue(position);
 
-        if (count == 0 || value == null) {
+        try {
+            int count = getCount(position);
+            Double value = super.getValue(position);
+
+            if (count == 0 || value == null) {
+                return null;
+            }
+
+            return value / count;
+        } catch (Exception e) {
             return null;
         }
 
-        return value / count;
     }
 }

@@ -48,14 +48,19 @@ public class TotalAggregator extends AbstractAggregator {
     @Override
     protected Double calculate(Double value, Double aggregation,
             Position position, RenderContext context) {
-        if (value == null) {
-            value = 0d;
+        try {
+            if (value == null) {
+                value = 0d;
+            }
+
+            if (aggregation == null) {
+                aggregation = 0d;
+            }
+
+            return value + aggregation;
+        } catch (Exception e) {
+            return 0d;
         }
 
-        if (aggregation == null) {
-            aggregation = 0d;
-        }
-
-        return value + aggregation;
     }
 }
