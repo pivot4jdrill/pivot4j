@@ -105,7 +105,9 @@
                 <f:facet name="footer">
                     <h:panelGroup id="button-bar" styleClass="ui-dialog-buttonpane"
                                   layout="block">
-                        <p:messages showDetail="true" autoUpdate="true" closable="true" />
+                        <p:messages showDetail="true" closable="true" >
+                            <p:autoUpdate/>
+                        </p:messages>
 
                         <p:commandButton id="btn-ok" value="#{msg['button.ok']}"
                                          icon="ui-icon-check" action="#{migrationHandler.proceed}"
