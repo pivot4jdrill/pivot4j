@@ -92,7 +92,7 @@
         <version.hamcrest>1.3</version.hamcrest>
         <version.htmlunit>2.37.0</version.htmlunit>
         <version.jacoco>0.7.1.201405082137</version.jacoco>
-        <version.junit>4.11</version.junit>
+        <version.junit>4.13.1</version.junit>
 
         <version.primefaces>8.0</version.primefaces>
         <version.primefaces.extensions>8.0</version.primefaces.extensions>
