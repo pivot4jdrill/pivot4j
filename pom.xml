@@ -42,7 +42,7 @@
         <version.plugin.assembly>2.4</version.plugin.assembly>
         <version.plugin.changes>2.10</version.plugin.changes>
         <version.plugin.compiler>3.1</version.plugin.compiler>
-        <version.plugin.cup>1.0.0</version.plugin.cup>
+        <version.plugin.cup>11b-20160615</version.plugin.cup>
         <version.plugin.dependency>2.8</version.plugin.dependency>
         <version.plugin.derby>1.9</version.plugin.derby>
         <version.plugin.surefire>2.17</version.plugin.surefire>
