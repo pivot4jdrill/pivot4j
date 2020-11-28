@@ -472,8 +472,13 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>${version.mariadb}</version>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${version.hsqldb}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.github.adminfaces</groupId>
             <artifactId>admin-theme</artifactId>
